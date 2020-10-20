@@ -59,3 +59,18 @@ The testing executable is also placed in the `build` directory. From within `bui
 ./test
 ```
 
+### Debugging with VSCode
+
+In addition I list below the steps used to debug this project using VS Code and [here](https://youtu.be/pThGzmT0C7E) is a video showing the steps.
+1.	Create a .vscode directory in your project directory
+2.	Copy the launch.json file (you see in the video) inside the .vscode directory
+3.	Make sure you have the Makefile file in your project directory
+4.	Run the commands
+  4.1 "make clean" and "make debug"
+5. The first command will cleanup unnecessary files and second command will generate your monitor project in debug mode
+6. Open VS code inside the project directory
+7. Set a breakpoint in a cpp file you want to stop
+8. Click Debug > Start debugging
+9. The program will stop in the first breakpoint
+
+And voila, happy debugging!
