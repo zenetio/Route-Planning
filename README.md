@@ -67,7 +67,9 @@ In addition I list below the steps used to debug this project using VS Code and 
 2.	Copy the launch.json file (you see in the video) inside the .vscode directory
 3.	Make sure you have the Makefile file in your project directory
 4.	Run the commands
-  4.1 "make clean" and "make debug"
+
+   4.1 "make clean" and "make debug"
+   
 5. The first command will cleanup unnecessary files and second command will generate your monitor project in debug mode
 6. Open VS code inside the project directory
 7. Set a breakpoint in a cpp file you want to stop
