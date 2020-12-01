@@ -16,7 +16,7 @@ class RouteModel : public Model {
         float h_value = std::numeric_limits<float>::max();
         float g_value = 0.0;
         bool visited = false;
-        std::vector<Node *> neighbors;
+        std::vector<Node*> neighbors;
 
         void FindNeighbors();
         float distance(Node other) const {
@@ -24,22 +24,22 @@ class RouteModel : public Model {
         }
 
         Node(){}
-        Node(int idx, RouteModel * search_model, Model::Node node) : Model::Node(node), parent_model(search_model), index(idx) {}
+        Node(int idx, RouteModel* search_model, Model::Node node) : Model::Node(node), parent_model(search_model), index(idx) {}
 
       private:
         int index;
-        Node * FindNeighbor(std::vector<int> node_indices);
-        RouteModel * parent_model = nullptr;
+        Node* FindNeighbor(std::vector<int> node_indices);
+        RouteModel* parent_model = nullptr;
     };
 
     RouteModel(const std::vector<std::byte> &xml);
-    Node &FindClosestNode(float x, float y);
-    auto &SNodes() { return m_Nodes; }
+    Node& FindClosestNode(float x, float y);
+    auto& SNodes() { return m_Nodes; }
     std::vector<Node> path;
     
   private:
     void CreateNodeToRoadHashmap();
-    std::unordered_map<int, std::vector<const Model::Road *>> node_to_road;
+    std::unordered_map<int, std::vector<const Model::Road*>> node_to_road;
     std::vector<Node> m_Nodes;
 
 };

@@ -34,9 +34,7 @@ public:
     };
     
     struct Building : Multipolygon {};
-    
     struct Leisure : Multipolygon {};
-    
     struct Water : Multipolygon {};
     
     struct Landuse : Multipolygon {
