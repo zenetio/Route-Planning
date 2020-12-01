@@ -26,9 +26,15 @@ void Render::Display( io2d::output_surface &surface )
     DrawWater(surface);    
     DrawRailways(surface);
     DrawHighways(surface);    
-    DrawBuildings(surface);  
+    DrawBuildings(surface);
+    // Function called with the surface as defined by the given start and end points 
+    // traces the shortest route between start point and end point
     DrawPath(surface);
+    // Function called with the surface as defined by the given start and end points 
+    // marks the start position with the help of green symbol
     DrawStartPosition(surface);   
+    // Function called with the surface as defined by the given start and end points 
+    // marks the end position with the help of red symbol
     DrawEndPosition(surface);
 }
 
